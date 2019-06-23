@@ -3,14 +3,10 @@
 >CLI  
 >*command line interface*
 
----
-
 ## 개발환경구성
 - Nodejs > 6.9.0 (Node 8.15.0)
 - VS CODE
 - Chrome Browser
-
----
 
 ## Install Guide
 https://cli.angular.io/ - 설치방법에 대한 안내

@@ -1,7 +1,5 @@
 # Angular Lecture Orientation
-Front부터 Back까지
-
----
+>Front부터 Back까지
 
 ## 선수지식
 HTML, CSS, JS에 대한 기본적인 지식  
