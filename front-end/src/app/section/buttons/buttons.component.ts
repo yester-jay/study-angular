@@ -7,7 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ButtonsComponent implements OnInit {
 
+  count = 0;
+
   constructor() { }
+
+  start(){
+    this.count ++;
+  }
 
   ngOnInit() {
   }
