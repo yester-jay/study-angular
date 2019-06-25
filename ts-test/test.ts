@@ -1,5 +1,10 @@
-// typescript의 class는 ES6의 class보다 많은 기능을 지원
+let a: number = 10;
+let b = 10;
 
-class Appcomponent{
+@NgModule()
+class App extends Parent{
+    
+    constructor(private http: HttpClient){
 
+    }
 }
