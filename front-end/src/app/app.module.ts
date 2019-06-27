@@ -8,6 +8,7 @@ import { FooterComponent } from './footer/footer.component';
 import { SectionComponent } from './section/section.component';
 import { TimeDisplayComponent } from './section/time-display/time-display.component';
 import { ButtonsComponent } from './section/buttons/buttons.component';
+import { LayoutModule } from './layout/layout.module';
 
 @NgModule({
   declarations: [
@@ -16,11 +17,15 @@ import { ButtonsComponent } from './section/buttons/buttons.component';
     FooterComponent,
     SectionComponent,
     TimeDisplayComponent,
-    ButtonsComponent,
+    ButtonsComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    LayoutModule
+  ],
+  exports: [
+
   ],
   providers: [],
   bootstrap: [AppComponent]
