@@ -17,7 +17,7 @@ export class TimeDisplayComponent implements OnInit {
 
   constructor() {
     
-    console.log(this.inputData);
+    // console.log(this.inputData);
   }
 
   timeStart(){
