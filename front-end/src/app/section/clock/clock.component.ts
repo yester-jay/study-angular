@@ -3,6 +3,7 @@ import * as moment from 'moment';
 import { interval } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { Router } from '@angular/router';
+import { PageToggleService } from 'src/app/share/page-toggle.service';
 
 @Component({
   selector: 'app-clock',
@@ -13,7 +14,7 @@ export class ClockComponent implements OnInit {
 
   timeString
 
-  constructor(private router: Router) {
+  constructor(private router: Router, private pageRoggleService: PageToggleService) {
     
     // setInterval(()=>{
       
@@ -30,8 +31,9 @@ export class ClockComponent implements OnInit {
   }
 
   goStopwatch(){
+    this.pageRoggleService.goPage('/stopwatch');
     
-    this.router.navigateByUrl('/stopwatch');
+    // this.router.navigateByUrl('/stopwatch');
   }
 
   // getCurrentTime(){
