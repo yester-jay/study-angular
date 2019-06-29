@@ -6,7 +6,7 @@ import { PageToggleService } from 'src/app/share/page-toggle.service';
   selector: 'app-stopwatch',
   templateUrl: './stopwatch.component.html',
   styleUrls: ['./stopwatch.component.scss'],
-  providers: [PageToggleService]
+  // providers: [PageToggleService]
 })
 export class StopwatchComponent implements OnInit {
 
