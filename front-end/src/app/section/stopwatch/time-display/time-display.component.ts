@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, SimpleChanges } from '@angular/core';
 import { PageToggleService } from 'src/app/share/page-toggle.service';
 
 @Component({
@@ -48,8 +48,11 @@ export class TimeDisplayComponent implements OnInit {
     this.min = 0;
   }
 
-  ngOnChanges(changes){
+  ngOnChanges(changes: SimpleChanges){
+    // 외부로 부터 받은 값의 변화에 대한 대응
+    console.log('ng on changes');
     for(let propName in changes){
+      console.log(changes);
       if(propName == 'inputData'){
         switch(changes[propName].currentValue){
           case 'start':
@@ -67,6 +70,30 @@ export class TimeDisplayComponent implements OnInit {
   }
 
   ngOnInit() {
+    // 컴포넌트가 생성될 때에 한번만 불린다
+    // 컴포넌트 초기화에 시에 한번만 불러줄 값을 저장하기도 한다
+    // 한번만 불려도 되는 값들을 저장
+    console.log('ng on init')
+  }
+  ngDoCheck(){
+    // 데이터 변화를 감지하여 로직을 실행
+    // 여러번 불러진다
+    console.log('ng do check')
+  }
+  ngAfterContentInit(){
+    console.log('ng after content init')
+  }
+  ngAfterContentChecked(){
+    console.log('ng after content checked')
+  }
+  ngAfterViewInit(){
+    console.log('ng after view init')
+  }
+  ngAfterViewChecked(){
+    console.log('ng after view checked')
+  }
+  ngOnDestroy(){
+    console.log('ng on destroy')
   }
 
 }
